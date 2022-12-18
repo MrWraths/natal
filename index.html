@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Exercise</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/phosphor-icons"></script>
+</head>
+<body>
+    
+
+    <div class="container front">
+        <header>
+            roger.dev
+        </header>
+
+        <main class="welcome">
+            <div class="front-image">
+                <img src="Images/Scenes05.svg" alt="" width="100%">
+            </div>
+            
+            <div class="front-text">
+                <h2>Selamat Datang Guys,
+                    <br>di Website Cobaan ini!
+                </h2>
+                <p>Berhubung sebentar lagi ada pertemuan acara bersama!</p>
+            </div>
+
+            <div class="next-button">
+                <button id="verifikasi">
+                    Yok Verifikasi Dulu!
+                    <i class="ph-arrow-right-bold"></i>
+                </button>
+            </div>
+        </main>
+    </div>
+    
+
+    <div class="container user-verif active-hidden">
+        <div class="verif-header">
+            <i class="ph-caret-left-bold back"></i>
+            <img src="Images/Scenes02.svg" alt="" width="95%">
+        </div>
+
+        <div class="verif-msg">
+            <h1>Yok Verifikasi Dulu!</h1>
+            <p>Isi semua details yang diperlukan untuk lanjut</p>
+        </div>
+
+        <div class="verif-form">
+            <form action="">
+                <label for="">Nama</label>
+
+                <div class="username">
+                    <i class="ph-user-bold user"></i>
+                    <input type="text" placeholder="Nama depan" id="getName">
+                </div>
+
+                <label for="">Password</label>
+                
+                <div class="password">
+                    <i class="ph-lock-key-bold key"></i>
+                    <input type="password" placeholder="******" maxlength="10" id="getPass">
+                    <div class="password-eyes">
+                        <i class="ph-eye-slash-bold unseen"></i>
+                        <i class="ph-eye-bold seen hidden-eye"></i>
+                    </div>
+                </div>
+
+                <div class="next-button">
+                    <input type="button" value="Masuk" id="user-login">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="container avatar active-hidden">
+        
+    </div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
