@@ -35,59 +35,55 @@ $(document).ready(function () {
                 $(".avatar").delay(500).fadeIn(500);
 
                 var nama_orang = "<h2>" +arrName[i]+"</h2>"
-
+                var temp;
                 if ("felix" === nama.value.toLowerCase()) {
-                    var temp = "<img src=images/avatar09.png alt=>";
-                    $(".avatar").append(temp, nama_orang);
+                     temp = "<img src=images/avatar09.png alt=>";
                 }
 
                 if ("jeremy" === nama.value.toLowerCase()) {
-                    var temp = "<img src=images/avatar03.png alt=>";
-                    $(".avatar").append(temp, nama_orang);
+                     temp = "<img src=images/avatar03.png alt=>";
                 }
 
                 if ("vionita" === nama.value.toLowerCase()) {
-                    var temp = "<img src=images/avatar04.png alt=>";
-                    $(".avatar").append(temp, nama_orang);
+                     temp = "<img src=images/avatar04.png alt=>";
                 }
 
                 if ("silvana" === nama.value.toLowerCase()) {
-                    var temp = "<img src=images/avatar02.png alt=>";
-                    $(".avatar").append(temp, nama_orang);
+                     temp = "<img src=images/avatar02.png alt=>";
                 }
 
                 if ("vivi" === nama.value.toLowerCase()) {
-                    var temp = "<img src=images/avatar04.png alt=>";
-                    $(".avatar").append(temp, nama_orang);
+                     temp = "<img src=images/avatar04.png alt=>";
                 }
 
                 if ("jessica" === nama.value.toLowerCase()) {
-                    var temp = "<img src=images/avatar04.png alt=>";
-                    $(".avatar").append(temp, nama_orang);
+                     temp = "<img src=images/avatar04.png alt=>";
                 }
 
                 if ("renaldy" === nama.value.toLowerCase()) {
-                    var temp = "<img src=images/avatar01.png alt=>";
-                    $(".avatar").append(temp, nama_orang);
+                     temp = "<img src=images/avatar01.png alt=>";
                 }
 
                 if ("roger" === nama.value.toLowerCase()) {
-                    var temp = "<img src=images/avatar01.png alt=>";
-                    $(".avatar").append(temp, nama_orang);
+                     temp = "<img src=images/avatar01.png alt=>";
                 }
 
                 if ("cryl" === nama.value.toLowerCase()) {
-                    var temp = "<img src=images/avatar05.png alt=>";
-                    $(".avatar").append(temp, nama_orang);
+                     temp = "<img src=images/avatar05.png alt=>";
                 }
 
                 if ("stanley" === nama.value.toLowerCase()) {
-                    var temp = "<img src=images/avatar03.png alt=>";
-                    $(".avatar").append(temp, nama_orang);
+                     temp = "<img src=images/avatar03.png alt=>";
                 }
 
+                $(".avatar").append(temp, nama_orang);
+            
+
                 $(".avatar").delay(1500).fadeOut(500);
-                $(".fitur").delay(500).fadeIn(500);
+                $(".fitur").delay(3000).fadeIn(500);
+                $("#append-img-user").after(temp);
+                document.getElementById("user-names").innerHTML = nama_orang;
+                $("body").addClass("background-body");
                 return;
             }
         }

@@ -11,7 +11,6 @@
     body {
         font-family: 'Rubik';
         height: max-content;
-        background-color: #FFFAF0;
     }
 
     .container {
@@ -19,6 +18,7 @@
         flex-direction: column;
         align-items: center;
         margin-bottom: 1em;
+        width: 100vw;
     }
 
     header {
@@ -93,7 +93,7 @@
     }
 
     .verif-header>i {
-        font-size: 2.75em;
+        font-size: 2.2em;
         margin: 15px;
         position: absolute;
         left: 0;
@@ -145,6 +145,11 @@
         font-size: 20px;
     }
 
+    .password-eyes {
+        display: flex;
+        align-items: center;
+    }
+
     .password-eyes i {
         position: absolute;
     }
@@ -166,16 +171,6 @@
         font-size: 22px;
     }
 
-    .circle {
-        border: 2px solid #252525;
-        width: 25%;
-        border-radius: 50px;
-        -webkit-border-radius: 50px;
-        -moz-border-radius: 50px;
-        -ms-border-radius: 50px;
-        -o-border-radius: 50px;
-    }
-
     .avatar {
         position: absolute;
         top: 50%;
@@ -192,7 +187,107 @@
         width: 135px;
     }
 
+    .fitur>div {
+        margin-left: 20px;
+    }
+
+    .header-fitur img {
+        width: 50px;
+        border: 2px solid white;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+    }
+
+    .header-fitur i {
+        font-size: 1.2em;
+    }
+
+    .header-fitur h5 {
+        margin: 0;
+    }
+
+    .header-fitur {
+        width: 90%;
+        display: flex;
+        margin: 20px auto 10px auto;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .welcome-user {
+        margin-top: 40px;
+    }
+
+    .welcome-user p {
+        font-size: 14px;
+        margin-top: 5px;
+    }
+
+    .carousel-fitur {
+        margin-top: 40px;
+    }
+
+    .carousel-fitur h5 {
+        font-size: 14px;
+    }
+
+    .fitur-choose {
+        margin-top: 10px;
+        margin-right: 10px;
+        padding-bottom: 5px;
+        display: grid;
+        gap: 10px;
+        grid-auto-flow: column;
+        grid-auto-columns: 13.5em;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
+    }
+
+    .fitur-choose::-webkit-scrollbar {
+        display: none;
+    }
+
+    .fitur-choose button {
+        outline: none;
+        border: none;
+        background-color: #252525;
+        padding: 15px 25px;
+        color: white;
+        font-family: 'Rubik';
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 4px 4px 5px rgb(0, 0, 0, 0.5);
+    }
+
+    .snap-inline {
+        scroll-snap-type: inline mandatory;
+    }
+
+    .snap-inline>* {
+        scroll-snap-align: start;
+    }
+
     .active-hidden {
         display: none;
+    }
+
+    .background-body {
+        background: url("Images/white-wallpaper.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 }
