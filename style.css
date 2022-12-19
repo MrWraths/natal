@@ -11,6 +11,7 @@
     body {
         font-family: 'Rubik';
         height: max-content;
+        background-color: white;
     }
 
     .container {
@@ -187,13 +188,17 @@
         width: 135px;
     }
 
+    .fitur {
+        padding-bottom: 3em;
+    }
+
     .fitur>div {
         margin-left: 20px;
     }
 
     .header-fitur img {
         width: 50px;
-        border: 2px solid white;
+        border: 2px solid #252525;
         border-radius: 50px;
         -webkit-border-radius: 50px;
         -moz-border-radius: 50px;
@@ -206,13 +211,21 @@
     }
 
     .header-fitur h5 {
-        margin: 0;
+        margin: auto;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        -webkit-transform: translate(-50%);
+        -moz-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+        -o-transform: translate(-50%);
     }
 
     .header-fitur {
         width: 90%;
         display: flex;
-        margin: 20px auto 10px auto;
+        margin: 0 auto 10px auto;
+        padding-top: 20px;
         justify-content: space-between;
         align-items: center;
     }
@@ -226,11 +239,42 @@
         margin-top: 5px;
     }
 
-    .carousel-fitur {
-        margin-top: 40px;
+    .remainder {
+        display: grid;
+        gap: 25px;
+        margin-right: 20px;
+        margin-top: 30px;
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .carousel-fitur h5 {
+    .remainder>div {
+        background-color: #252525;
+        padding: 15px 15px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: white;
+    }
+
+    .remainder>div>i {
+        font-size: 1.7em;
+    }
+
+    .time p {
+        font-size: 18xp;
+    }
+
+    .carousel-fitur {
+        margin-top: 30px;
+    }
+
+    .carousel-fitur h5,
+    .friends h5 {
         font-size: 14px;
     }
 
@@ -281,13 +325,71 @@
         scroll-snap-align: start;
     }
 
+    .friends {
+        margin-top: 40px;
+    }
+
+    .friends>ul {
+        list-style-type: none;
+    }
+
+    .friends>ul>li {
+        background-color: white;
+        box-shadow: 4px 4px 5px rgb(0, 0, 0, 0.1);
+        border-radius: 8px;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
+        -ms-border-radius: 8px;
+        -o-border-radius: 8px;
+        margin: 10px 20px 10px 0;
+        padding: 10px 0 10px 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    .friends>ul>li>img {
+        width: 65px;
+        margin-left: 5px;
+    }
+
+    .informasi {
+        margin-left: 15px;
+    }
+
+    .informasi p {
+        font-size: 12px;
+    }
+
+
+    .fitur-countdown {
+        text-align: center;
+        position: absolute;
+        width: 100vw;
+        top: 50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+    }
+
+    .fitur-countdown img {
+        width: 100px;
+    }
+    .fitur-countdown h2 {
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
     .active-hidden {
         display: none;
     }
 
     .background-body {
-        background: url("Images/white-wallpaper.jpg");
-        background-repeat: no-repeat;
+        background: url("Images/wallpaper-this.png") center;
         background-size: cover;
+        background-repeat: no-repeat;
     }
 }

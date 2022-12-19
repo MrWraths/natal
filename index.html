@@ -11,7 +11,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/phosphor-icons"></script>
 </head>
-<body>
+<body onload="startTime()">
     
 
     <div class="container front">
@@ -93,13 +93,54 @@
             <p id="user-names"></p>
         </div>
 
+        <div class="remainder">
+            <div class="time">
+                <i class="ph-clock-bold"></i>
+                <p id="txt"></p>
+            </div>
+            <div class="date">
+                <i class="ph-calendar-bold"></i>
+                <p id="tanggal"></p>
+            </div>
+        </div>
+
         <div class="carousel-fitur">
             <h5>Fitur</h5>
             <div class="fitur-choose snap-inline">
-                <button data-button="dinner">Countdown Dinner</button>
-                <button data-button="natal">Countdown Natal</button>
-                <button data-button="tahun-baru">Countdown Tahun Baru</button>
+                <button class="countdown" data-button="dinner">Countdown Dinner</button>
+                <button class="countdown" data-button="natal">Countdown Natal</button>
+                <button class="countdown" data-button="tahun-baru">Countdown Tahun Baru</button>
             </div>
+        </div>
+
+        <div class="friends">
+            <h5>Teman</h5>
+            <ul class="append-friends">
+            </ul>
+        </div>
+    </div>
+
+    <div class="container countdown-events active-hidden">
+        <div class="verif-header">
+            <i class="ph-caret-left-bold back-fitur"></i>
+        </div>
+
+        <div class="dinner-countdown fitur-countdown active-hidden">
+            <img src="Images/turkey.png" alt="">
+            <h2>Countdown Christmas Dinner</h2>
+            <p id="timer-dinner"></p>
+        </div>
+
+        <div class="natal-countdown fitur-countdown active-hidden">
+            <img src="Images/christmas-tree.png" alt="">
+            <h2>Countdown Natal</h2>
+            <p id="timer-natal"></p>
+        </div>
+
+        <div class="tahunBaru-countdown fitur-countdown active-hidden">
+            <img src="Images/happy-new-year.png" alt="">
+            <h2>Countdown Tahun baru</h2>
+            <p id="timer-tahunBaru"></p>
         </div>
     </div>
     
