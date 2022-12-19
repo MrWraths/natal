@@ -189,7 +189,7 @@
     }
 
     .fitur {
-        padding-bottom: 3em;
+        padding-bottom: 1em;
     }
 
     .fitur>div {
@@ -388,7 +388,7 @@
     }
 
     .background-body {
-        background: url("Images/wallpaper-this.png") center;
+        background: url("Images/wallpaper-red.png") center center;
         background-size: cover;
         background-repeat: no-repeat;
     }
