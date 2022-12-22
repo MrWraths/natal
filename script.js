@@ -26,7 +26,7 @@ $(document).ready(function () {
     $("#user-login").click(function () {
         var nama = document.getElementById("getName");
 
-        var arrName = ["felix", "jeremy", "vionita", "silvana", "vivi", "jessica", "renaldy", "roger", "cryl", "stanley"];
+        var arrName = ["felix", "jeremy", "vionita", "silvana", "vivi", "jessica", "renaldy", "roger", "cryl", "stanley", "uni"];
 
         for (let i = 0; i < arrName.length; i++) {
             if (arrName[i] === nama.value.toLowerCase() && "gas" === pass.value) {
@@ -78,6 +78,10 @@ $(document).ready(function () {
                     temp = "<img src=images/avatar03.png alt=>";
                 }
 
+                                if ("uni" === nama.value.toLowerCase()) {
+                    temp = "<img src=images/avatar04.png alt=>";
+                }
+
                 $(".avatar").append(temp, nama_orang);
 
 
@@ -122,6 +126,9 @@ $(document).ready(function () {
                         }
                         if (l != 9) {
                             $(".append-friends").append("<li> <img src=images/avatar03.png alt=><div class=informasi><h3>Stanley</h3><p>Universitas Atmajaya Makassar</p></div></li>");
+                        }
+                                                if (l != 10) {
+                            $(".append-friends").append("<li> <img src=images/avatar04.png alt=><div class=informasi><h3>Uni</h3><p>Universitas Negeri Makassar</p></div></li>");
                         }
                     }
                 }
