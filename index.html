@@ -1,150 +1,328 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UI Exercise</title>
+    <title>Project Web 01</title>
 
     <link rel="stylesheet" href="style.css">
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://unpkg.com/phosphor-icons"></script>
 </head>
-<body onload="startTime()">
-    
 
-    <div class="container front">
+<body>
+
+    <div class="container-screen">
+
         <header>
-            roger.dev
+            <div class="profile">
+                <img src="profile.png" alt="logo" width="45">
+            </div>
+            <div class="logo">
+                <img src="logo.png" alt="" width="135">
+            </div>
+            <div class="link">
+                <i class="ph-globe-hemisphere-east-bold" style="font-size: 1.8rem;"></i>
+            </div>
         </header>
 
-        <main class="welcome">
-            <div class="front-image">
-                <img src="Images/Scenes05.svg" alt="" width="100%">
-            </div>
-            
-            <div class="front-text">
-                <h2>Selamat Datang Guys,
-                    <br>di Website Cobaan ini!
-                </h2>
-                <p>Berhubung sebentar lagi ada pertemuan acara bersama!</p>
-            </div>
-
-            <div class="next-button">
-                <button id="verifikasi">
-                    Yok Verifikasi Dulu!
-                    <i class="ph-arrow-right-bold"></i>
-                </button>
-            </div>
-        </main>
-    </div>
-    
-
-    <div class="container user-verif active-hidden">
-        <div class="verif-header">
-            <i class="ph-caret-left-bold back"></i>
-            <img src="Images/Scenes02.svg" alt="" width="95%">
-        </div>
-
-        <div class="verif-msg">
-            <h1>Yok Verifikasi Dulu!</h1>
-            <p>Isi semua details yang diperlukan untuk lanjut</p>
-        </div>
-
-        <div class="verif-form">
-            <form action="">
-                <label for="">Nama</label>
-
-                <div class="username">
-                    <i class="ph-user-bold user"></i>
-                    <input type="text" placeholder="Nama depan" id="getName">
-                </div>
-
-                <label for="">Password</label>
-                
-                <div class="password">
-                    <i class="ph-lock-key-bold key"></i>
-                    <input type="password" placeholder="******" maxlength="10" id="getPass">
-                    <div class="password-eyes">
-                        <i class="ph-eye-slash-bold unseen"></i>
-                        <i class="ph-eye-bold seen hidden-eye"></i>
-                    </div>
-                </div>
-
-                <div class="next-button">
-                    <input type="button" value="Masuk" id="user-login">
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <div class="container avatar active-hidden">
-    </div>
-
-    <div class="container fitur active-hidden">
-        <header class="header-fitur">
-            <i class="ph-list-bold"></i>
-            <h5 id="append-img-user">roger.dev</h5>
-        </header>
-
-        <div class="welcome-user">
-            <h2>Welcome Back!</h2>
-            <p id="user-names"></p>
-        </div>
-
-        <div class="remainder">
-            <div class="time">
-                <i class="ph-clock-bold"></i>
-                <p id="txt"></p>
-            </div>
-            <div class="date">
-                <i class="ph-calendar-bold"></i>
-                <p id="tanggal"></p>
-            </div>
-        </div>
-
-        <div class="carousel-fitur">
-            <h5>Fitur</h5>
-            <div class="fitur-choose snap-inline">
-                <button class="countdown" data-button="dinner">Countdown Dinner</button>
-                <button class="countdown" data-button="natal">Countdown Natal</button>
-                <button class="countdown" data-button="tahun-baru">Countdown Tahun Baru</button>
-            </div>
-        </div>
-
-        <div class="friends">
-            <h5>Teman</h5>
-            <ul class="append-friends">
+        <nav>
+            <ul>
+                <li>
+                    <a href="#" id="home">
+                        <i class="ph-house-bold"></i>
+                        <i class="ph-house-fill hidden-icon"></i>
+                        <p>Home</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="chara">
+                        <i class="ph-users-three-bold"></i>
+                        <i class="ph-users-three-fill hidden-icon"></i>
+                        <p>Character</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="ost">
+                        <i class="ph-music-note-bold"></i>
+                        <i class="ph-music-note-fill hidden-icon"></i>
+                        <p>OST</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" id="news">
+                        <i class="ph-newspaper-clipping-bold"></i>
+                        <i class="ph-newspaper-clipping-fill hidden-icon"></i>
+                        <p>News</p>
+                    </a>
+                </li>
             </ul>
+        </nav>
+
+        <section>
+            <div class="img-slider">
+                <div class="slide active">
+                    <img src="Wallpaper/genshin_wall1.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="Wallpaper/genshin_wall2.jpg" alt="">
+                </div>
+                <div class="slide">
+                    <img src="Wallpaper/genshin_wall3.jpg" alt="">
+                </div>
+            </div>
+        </section>
+
+
+
+        <section class="gallery">
+            <div class="view-all">
+                <h5>Characters</h5>
+                <a href="#">View All</a>
+            </div>
+
+            <div class="gallery-chara">
+                <div class="chara">
+                    <img src="Characters/Venti.webp" alt="" id="venti">
+                </div>
+                <div class="chara">
+                    <img src="Characters/Zhongli.webp" alt="" id="zhongli">
+                </div>
+                <div class="chara">
+                    <img src="Characters/Raiden Shogun.webp" alt="" id="raiden">
+                </div>
+                <div class="chara">
+                    <img src="Characters/Nahida.webp" alt="" id="nahida">
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <div class="view-all">
+                <h5>Weapons</h5>
+                <a href="#">View All</a>
+            </div>
+
+            <div class="gallery-chara">
+                <div class="chara">
+                    <img src="Unforged.png" alt="">
+                </div>
+                <div class="chara">
+                    <img src="Unforged.png" alt="">
+                </div>
+                <div class="chara">
+                    <img src="Unforged.png" alt="">
+                </div>
+            </div>
+        </section>
+
+        <section class="music">
+            <div class="view-all">
+                <h5>OST</h5>
+                <a href="#">View All</a>
+            </div>
+
+            <div class="ost">
+                <div class="wrapper-music snap-inline">
+                    <div class="content-music">
+                        <div class="placeholder-img">
+                            <img src="Wallpaper/music-mondstadt.jpg" alt="">
+                        </div>
+
+                        <div class="music-desc">
+                            <div class="desc">
+                                <h5>Mondstadt</h5>
+                                <p>Bustling Afternoon of Mondstadt</p>
+                            </div>
+                            <img src="play-circle-duotone.png" alt="" class="play-button active-button play-1"
+                                onclick="playMusic('1', 'play')">
+                            <img src="pause-circle-fill.png" alt="" srcset="" class="pause-button pause-1"
+                                onclick="playMusic('1', 'pause')">
+                        </div>
+                    </div>
+
+                    <div class="content-music">
+                        <div class="placeholder-img">
+                            <img src="Wallpaper/music-mondstadt01.jpg" alt="">
+                        </div>
+
+                        <div class="music-desc">
+                            <div class="desc">
+                                <h5>Mondstadt</h5>
+                                <p>Hence Begins the Journey</p>
+                            </div>
+                            <img src="play-circle-duotone.png" alt="" class="play-button active-button play-2"
+                                onclick="playMusic('2', 'play')">
+                            <img src="pause-circle-fill.png" alt="" srcset="" class="pause-button pause-2"
+                                onclick="playMusic('2', 'pause')">
+                        </div>
+                    </div>
+                    <div class="content-music">
+                        <div class="placeholder-img">
+                            <img src="Wallpaper/music-liyue.jpg" alt="">
+                        </div>
+
+                        <div class="music-desc">
+                            <div class="desc">
+                                <h5>Liyue</h5>
+                                <p>Dance with the Great Vortex</p>
+                            </div>
+                            <img src="play-circle-duotone.png" alt="" class="play-button active-button play-3"
+                                onclick="playMusic('3', 'play')">
+                            <img src="pause-circle-fill.png" alt="" srcset="" class="pause-button pause-3"
+                                onclick="playMusic('3', 'pause')">
+                        </div>
+                    </div>
+                    <div class="content-music">
+                        <div class="placeholder-img">
+                            <img src="Wallpaper/music-liyue01.jpg" alt="">
+                        </div>
+
+                        <div class="music-desc">
+                            <div class="desc">
+                                <h5>Liyue</h5>
+                                <p>Lantern Rite Theme</p>
+                            </div>
+                            <img src="play-circle-duotone.png" alt="" class="play-button active-button play-4"
+                                onclick="playMusic('4', 'play')">
+                            <img src="pause-circle-fill.png" alt="" srcset="" class="pause-button pause-4"
+                                onclick="playMusic('4', 'pause')">
+                        </div>
+                    </div>
+
+                    <div class="content-music">
+                        <div class="placeholder-img">
+                            <img src="Wallpaper/music-inazuma.jpg" alt="">
+                        </div>
+
+                        <div class="music-desc">
+                            <div class="desc">
+                                <h5>Inazuma</h5>
+                                <p>Ver 2.0 Trailer</p>
+                            </div>
+                            <img src="play-circle-duotone.png" alt="" class="play-button active-button play-5"
+                                onclick="playMusic('5', 'play')">
+                            <img src="pause-circle-fill.png" alt="" srcset="" class="pause-button pause-5"
+                                onclick="playMusic('5', 'pause')">
+                        </div>
+                    </div>
+                    <div class="content-music">
+                        <div class="placeholder-img">
+                            <img src="Wallpaper/music-inazuma01.jpg" alt="">
+                        </div>
+
+                        <div class="music-desc">
+                            <div class="desc">
+                                <h5>Inazuma</h5>
+                                <p>Raiden Shogun Theme</p>
+                            </div>
+                            <img src="play-circle-duotone.png" alt="" class="play-button active-button play-6"
+                                onclick="playMusic('6', 'play')">
+                            <img src="pause-circle-fill.png" alt="" srcset="" class="pause-button pause-6"
+                                onclick="playMusic('6', 'pause')">
+                        </div>
+                    </div>
+                    <div class="content-music">
+                        <div class="placeholder-img">
+                            <img src="Wallpaper/music-sumeru.jpg" alt="">
+                        </div>
+
+                        <div class="music-desc">
+                            <div class="desc">
+                                <h5>Sumeru</h5>
+                                <p>Ver 3.0 Trailer</p>
+                            </div>
+                            <img src="play-circle-duotone.png" alt="" class="play-button active-button play-7"
+                                onclick="playMusic('7', 'play')">
+                            <img src="pause-circle-fill.png" alt="" srcset="" class="pause-button pause-7"
+                                onclick="playMusic('7', 'pause')">
+                        </div>
+                    </div>
+                    <div class="content-music">
+                        <div class="placeholder-img">
+                            <img src="Wallpaper/music-sumeru01.jpg" alt="">
+                        </div>
+
+                        <div class="music-desc">
+                            <div class="desc">
+                                <h5>Sumeru</h5>
+                                <p>Scaramouche Battle Theme</p>
+                            </div>
+                            <img src="play-circle-duotone.png" alt="" class="play-button active-button play-8"
+                                onclick="playMusic('8', 'play')">
+                            <img src="pause-circle-fill.png" alt="" srcset="" class="pause-button pause-8"
+                                onclick="playMusic('8', 'pause')">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <div class="wrapper-audio">
+            <audio src="Audio/y2mate.com - Genshin Impact Original Soundtrack Bustling Afternoon of Mondstadt.mp3"
+                id="1" loop></audio>
+            <audio src="Audio/y2mate.com - Hence Begins the Journey.mp3" id="2" loop></audio>
+            <audio src="Audio/y2mate.com - Dance with the Great Vortex.mp3" id="3" loop></audio>
+            <audio
+                src="Audio/y2mate.com - Lantern Rite Theme Music EXTENDED  Fleeting Colors in Flight Pt 1 tnbee mix  Genshin Impact.mp3"
+                id="4" loop></audio>
+
+            <audio
+                src="Audio/y2mate.com - Version 20 Trailer OST  The Immovable God and the Eternal Euthymia tnbee mix  Genshin Impact.mp3"
+                id="5" loop></audio>
+            <audio
+                src="Audio/y2mate.com - Raiden Shogun Theme Music EXTENDED  Judgment of Euthymia tnbee mix  Genshin Impact.mp3"
+                id="6" loop></audio>
+            <audio
+                src="Audio/y2mate.com - Version 30 Trailer OST  The Morn a Thousand Roses Brings tnbee mix  Genshin Impact.mp3"
+                id="7" loop></audio>
+            <audio
+                src="Audio/y2mate.com - Scaramouche Battle Theme EPIC VERSION ft Midnight City Music  MarcoMeatball  Genshin Impact.mp3"
+                id="8" loop></audio>
         </div>
     </div>
 
-    <div class="container countdown-events active-hidden">
-        <div class="verif-header">
-            <i class="ph-caret-left-bold back-fitur"></i>
-        </div>
-
-        <div class="dinner-countdown fitur-countdown active-hidden">
-            <img src="Images/turkey.png" alt="">
-            <h2>Countdown Christmas Dinner</h2>
-            <p id="timer-dinner"></p>
-        </div>
-
-        <div class="natal-countdown fitur-countdown active-hidden">
-            <img src="Images/christmas-tree.png" alt="">
-            <h2>Countdown Natal</h2>
-            <p id="timer-natal"></p>
-        </div>
-
-        <div class="tahunBaru-countdown fitur-countdown active-hidden">
-            <img src="Images/happy-new-year.png" alt="">
-            <h2>Countdown Tahun baru</h2>
-            <p id="timer-tahunBaru"></p>
-        </div>
-    </div>
-    
 
     <script src="script.js"></script>
+
+    <script type="text/javascript">
+        var slides = document.querySelectorAll('.slide');
+        let currentSlide = 1;
+
+
+        // Javascript for image slider autoplay navigation
+        var repeat = function (activeClass) {
+            let active = document.getElementsByClassName('active');
+            let i = 1;
+
+            var repeater = () => {
+                setTimeout(function () {
+                    [...active].forEach((activeSlide) => {
+                        activeSlide.classList.remove('active');
+                    });
+
+                    slides[i].classList.add('active');
+                    i++;
+
+                    if (slides.length == i) {
+                        i = 0;
+                    }
+                    if (i >= slides.length) {
+                        return;
+                    }
+                    repeater();
+                }, 10000);
+            }
+            repeater();
+        }
+        repeat();
+    </script>
 </body>
+
 </html>
